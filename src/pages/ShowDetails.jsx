@@ -37,9 +37,7 @@ export default function ShowDetails() {
         {showInfo?.genres.map((category) => (
           <ShowCategoryTag>{category}</ShowCategoryTag>
         ))}
-        <ShowRating>
-          Show Rating: <bold>{showInfo?.rating.average}</bold>
-        </ShowRating>
+        <ShowRating>Show Rating: {showInfo?.rating.average}</ShowRating>
         <ShowSummary>
           <div dangerouslySetInnerHTML={createMarkup()} />
         </ShowSummary>

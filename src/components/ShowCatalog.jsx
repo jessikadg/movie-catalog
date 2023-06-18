@@ -1,4 +1,3 @@
-import { HomeHeader } from "./HomeHeader";
 import { getShowListByRating } from "../api/getShowListByRating";
 import { useState, useEffect } from "react";
 import CategoryRow from "./CategoryRow";
@@ -36,7 +35,6 @@ export default function ShowCatalog() {
 
   return (
     <>
-      <HomeHeader featuredShows={topTenShows} />
       {mainCategories.map((category) => (
         <CategoryRow
           showsOnCategory={showsOnCategory(category)}

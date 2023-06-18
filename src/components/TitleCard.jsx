@@ -9,7 +9,7 @@ export default function TitleCard(props) {
     <LazyLoad offset={300}>
       <Link to={`/show/${tvShow.id}`}>
         <Card
-          backgroundImage={tvShow.image.medium}
+          backgroundimage={tvShow.image.medium}
           key={`${rowCategory}-${tvShow.id}`}
         />
       </Link>

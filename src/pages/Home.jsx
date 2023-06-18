@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import ShowCatalog from "../components/ShowCatalog";
+import SearchBar from "../components/SearchBar";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <div>Ubi Ops</div>
         <div>Assessment by Jess Gomes</div>
       </TopBar>
-
+      <SearchBar />
       <ShowCatalog />
     </>
   );

@@ -6,5 +6,5 @@ export const Card = styled.div`
   margin-right: 5px;
   display: block;
   background-size: cover;
-  background-image: ${(props) => `url(${props.backgroundImage})`};
+  background-image: ${(props) => `url(${props.backgroundimage})`};
 `;

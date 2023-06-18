@@ -5,6 +5,7 @@ html {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 /* The following elements usually are defined from a component library, but for the sake of the assignment, I'm heading here at the top level of the repo */

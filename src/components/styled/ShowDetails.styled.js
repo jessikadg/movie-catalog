@@ -61,7 +61,7 @@ export const ShowRating = styled.div`
   margin-top: 20px;
 `;
 
-export const ShowSummary = styled.p`
+export const ShowSummary = styled.div`
   line-height: 2;
   margin-bottom: 36px;
 `;
