@@ -1,0 +1,33 @@
+html {
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* The following elements usually are defined from a component library, but for the sake of the assignment, I'm heading here at the top level of the repo */
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+span {
+  letter-spacing: 1px;
+}
