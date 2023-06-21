@@ -14,8 +14,8 @@ export default function CategoryRow(props) {
 
       <CategoryFixedRow>
         <ScrollCategory>
-          {showsOnCategory.map((tvShow) => (
-            <TitleCard tvShow={tvShow} rowCategory={category} />
+          {showsOnCategory.map((tvShow, index) => (
+            <TitleCard tvShow={tvShow} rowCategory={category} index={index} />
           ))}
         </ScrollCategory>
       </CategoryFixedRow>

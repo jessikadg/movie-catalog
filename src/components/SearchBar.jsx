@@ -7,8 +7,10 @@ import {
   SearchResultRow,
   SearchResultsDropDown,
   SearchBackgroundOverlay,
+  SearchInputArea,
 } from "./styled/Search.styled";
 import { Link } from "react-router-dom";
+import { AiOutlineSearch } from "react-icons/ai";
 
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -24,15 +26,20 @@ export default function SearchBar() {
       <SearchBarWrapper>
         <SearchBarContainer>
           <span>Know everything about your favourite show</span>
-          <SearchInput
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+          <SearchInputArea>
+            <SearchInput
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <AiOutlineSearch size={25} />
+          </SearchInputArea>
 
+          {/* Loading and Error handling could also be implemented here */}
           {searchTerm !== "" && (
             <>
               <SearchBackgroundOverlay />
               <SearchResultsDropDown>
+                {/* Accessibility can be improved: making the focus managable by keyboard for example */}
                 {searchResults.length ? (
                   searchResults.map((result) => (
                     <Link to={`/show/${result.show.id}`}>
@@ -40,7 +47,7 @@ export default function SearchBar() {
                         {result.show.name}
                         <img
                           src={result?.show?.image?.medium}
-                          alt={`${result?.show.name}`}
+                          alt={`${result.show.name}`}
                         />
                       </SearchResultRow>
                     </Link>

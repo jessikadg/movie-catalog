@@ -19,17 +19,38 @@ export const SearchBarContainer = styled.div`
   span {
     margin: 20px auto;
   }
+
+  //fadein animation:
+  animation: fadein 0.5s ease-in-out;
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+`;
+
+export const SearchInputArea = styled.div`
+  display: flex;
+  width: 300px;
+  margin: 5px auto;
+  align-items: center;
+  gap: 5px;
+  background: #2f2f2f;
+  border-radius: 20px;
+  padding-right: 10px;
 `;
 
 export const SearchInput = styled.input`
   background-color: #2f2f2f;
   height: 30px;
-  width: 300px;
   color: white;
-  margin: 5px auto;
   font-size: 22px;
   padding: 5px 20px;
-  border-radius: 20px;
+  border-radius: 20px 0 0 20px;
   border: none;
 `;
 

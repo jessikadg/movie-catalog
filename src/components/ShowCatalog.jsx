@@ -5,12 +5,16 @@ import _ from "underscore";
 
 export default function ShowCatalog() {
   const [allShows, setAllShows] = useState();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getShowsData = async () => {
       try {
-        await getShowListByRating().then((data) => setAllShows(data));
+        await getShowListByRating()
+          .then((data) => setAllShows(data))
+          .then(setLoading(false));
       } catch (e) {
+        setLoading(false);
         console.log(e);
       }
     };
@@ -35,13 +39,27 @@ export default function ShowCatalog() {
 
   return (
     <>
-      {mainCategories.map((category) => (
-        <CategoryRow
-          showsOnCategory={showsOnCategory(category)}
-          category={category}
-          key={category}
-        />
-      ))}
+      {loading ? (
+        <>
+          {/* In a real-world scenario that would be a loading spin component */}
+          <span>Loading...</span>
+        </>
+      ) : loading === false && !allShows ? (
+        <>
+          {/* In a real-world scenario that would be a error component */}
+          <span>Sorry, we couldn't load the shows</span>
+        </>
+      ) : (
+        <>
+          {mainCategories.map((category) => (
+            <CategoryRow
+              showsOnCategory={showsOnCategory(category)}
+              category={category}
+              key={category}
+            />
+          ))}
+        </>
+      )}
     </>
   );
 }
