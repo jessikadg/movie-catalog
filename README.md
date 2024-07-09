@@ -1,8 +1,8 @@
-# Technical Assessment
+# Movie Catalog
 
 <img width="1440" alt="Screenshot 2023-06-21 at 10 25 02" src="https://github.com/jessikadg/ubiops-assessment/assets/48770521/6cabdec2-761c-4f4d-9bf4-c6b848c78d22">
 
-As part of this assessment, a Show Catalog interface was created using TvMaze. 
+As part of a Job Technical Assessment, a Show Catalog interface was created using TvMaze. 
 
 Technical choices for it were React, Javascript (not Typescript to save some time from defining types optimally), and Styled Components (for a nice support of animations and clean resuable components).
 
