@@ -1,4 +1,4 @@
-# Ubi Ops Assessment
+# Technical Assessment
 
 <img width="1440" alt="Screenshot 2023-06-21 at 10 25 02" src="https://github.com/jessikadg/ubiops-assessment/assets/48770521/6cabdec2-761c-4f4d-9bf4-c6b848c78d22">
 
